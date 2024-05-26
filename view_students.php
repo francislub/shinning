@@ -55,16 +55,6 @@
          </div>
          <div class="row">
          <div class="col-md-5 text-right">
-         <label>Place of Birth:</label>
-         </div>
-         <div class="col-md-2 text-left">
-        <?php echo $row['BIRTH_PLACE'] ?>
-            
-          </div>
-
-        </div>
-         <div class="row">
-         <div class="col-md-5 text-right">
          <label>Address:</label>
          </div>
          <div class="col-md-4 text-left">
@@ -100,29 +90,6 @@
 
          </div>
 
-        <div class="row">
-         <div class="col-md-5 text-right">
-         <label>Intermediate Course Completed:</label>
-         </div>
-         <div class="col-md-2 text-left">
-          <?php echo $row['INT_COURSE_COMP'] ?>
-          <label></label>
-            
-          </div>
-
-         </div>
-
-         <div class="row">
-         <div class="col-md-5 text-right">
-         <label>Total no. of years:</label>
-         </div>
-         <div class="col-md-2 text-left">
-          <?php echo $row['TOTAL_NO_OF_YEARS'] ?>
-          <label></label>
-            
-          </div>
-
-         </div>
          <div class="row">
          <div class="col-md-5 text-right">
          <label>School Year:</label>

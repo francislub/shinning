@@ -65,12 +65,6 @@
       $("#comment").val($("#comment"+i).val());
       $("#head").html('Update Grade');
       $("#btn_add").html('Update');
-     
-  
-     
-
-
-
   }
 </script>
 

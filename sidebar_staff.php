@@ -7,24 +7,28 @@ $school_year=$s['school_year'];
 ?>
 
 
-
-
- <ul class="nav navbar-nav side-nav">
+<ul class="nav navbar-nav side-nav">
+ <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+      <center><img src="logo1.PNG" alt="User Image" width="140" height="141" class="img-circle elevation-2"> </center>       
+    </div>
+    
+</div>
  <li>
 <a href="rms.php?page=home"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 </li>
 <li>
-<a id=demo1 href="javascript:void(0)" data-toggle="collapse" data-target="#masterlistCollapse"><i class="fa fa-fw fa-files-o"></i> Master List <i class="fa fa-fw fa-caret-down"></i></a>
+<a id=demo1 href="javascript:void(0)" data-toggle="collapse" data-target="#masterlistCollapse"><i class="fa fa-fw fa-files-o"></i> Registration <i class="fa fa-fw fa-caret-down"></i></a>
 <ul id="masterlistCollapse" class="collapse">
     <li>
-        <a href="rms.php?page=Students"><i class="fa fa-fw fa-users"></i> Students List</a>
+        <a href="rms.php?page=Students"><i class="fa fa-fw fa-users"></i> Pupil's List</a>
     </li>
     <li class="">
         <a href="rms.php?page=subjects"><i class="fa fa-fw fa-book"></i> Subjects List</a>
     </li>
-    <li class="">
+    <!-- <li class="">
         <a href="rms.php?page=program"><i class="fa fa-fw fa-bars"></i> Curriculum List</a>
-    </li>
+    </li> -->
 </ul>
 </li>
 <li>
@@ -48,7 +52,7 @@ $school_year=$s['school_year'];
             <a href="rms.php?page=report"><i class="fa fa-fw fa-files-o"></i> Form 137</a>
         </li>
         <li>
-            <a href="#" data-toggle="modal" data-target="#s_report"><i class="fa fa-fw fa-files-o"></i> Students List</a>
+            <a href="#" data-toggle="modal" data-target="#s_report"><i class="fa fa-fw fa-files-o"></i> Pupil's List</a>
         </li>
         <li>
             <a href="rms.php?page=candidates_report&school_year=<?php echo $school_year ?>" ><i class="fa fa-fw fa-file-text-o"></i> Candidates Report</a>

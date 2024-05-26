@@ -42,9 +42,9 @@ $school_year=$s['school_year'];
     <!-- <li class="">
         <a href="rms.php?page=subjects"><i class="fa fa-fw fa-book"></i> Subjects List</a>
     </li> -->
-    <li class="">
+    <!-- <li class="">
         <a href="rms.php?page=program"><i class="fa fa-fw fa-bars"></i> Curriculum List</a>
-    </li>
+    </li> -->
 </ul>
 </li>
 <li>

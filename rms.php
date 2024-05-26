@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- <link rel="icon" href="images/logo.jpg"> -->
-    <title>School Management System</title>
+    <title>Shinning Star System</title>
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
     <link href="asset/css/sb-admin.css" rel="stylesheet">
     <link href="asset/css/plugins/morris.css" rel="stylesheet">

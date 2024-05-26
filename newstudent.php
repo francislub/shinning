@@ -7,16 +7,17 @@ $ln=$_POST['lname'];
 $fn=$_POST['fname'];
 $mn=$_POST['mname'];
 $gender=$_POST['gender'];
-$bp=$_POST['bp'];
+// $bp=$_POST['bp'];
 $dob=$_POST['dob'];
 $pob=$_POST['pob'];
 $pg=$_POST['pg'];
 $pga=$_POST['pg_add'];
-$icc=$_POST['icc'];
-$sy=$_POST['sy'];
-$tny=$_POST['tny'];
-$ave=$_POST['ave'];
+// $icc=$_POST['icc'];
+// $sy=$_POST['sy'];
+// $tny=$_POST['tny'];
+// $ave=$_POST['ave'];
 $prog = $_POST['prog'];
+$streem = $_POST['streem'];
 $user = $_SESSION['ID'];
 include 'db.php';
 
@@ -34,40 +35,32 @@ $search_query = mysqli_query($conn, "SELECT * FROM student_info WHERE LRN_NO = '
 			 LASTNAME,
 			 FIRSTNAME,
 			 MIDDLENAME,
-			 BIRTH_PLACE,
 			 PARENT_GUARDIAN,
 			 P_ADDRESS,
-			 INT_COURSE_COMP,
-			 SCHOOL_YEAR,
-			 GEN_AVE,
-			 TOTAL_NO_OF_YEARS,
 			 DATE_OF_BIRTH,
 			 ADDRESS,
 			 GENDER,
-			 PROGRAM
+			 PROGRAM,
+			 STREEM
 			   )
 		VALUES (
 			'$lrn',
 			'$ln',
 			'$fn',
 			'$mn',
-			'$bp',
 			'$pg',
 			'$pga',
-			'$icc',
-			'$sy',
-			'$ave',
-			'$tny',
 			'$dob',
 			'$pob',
 			'$gender',
-			'$prog'
+			'$prog',
+			'$streem'
 		)";
 		mysqli_query($conn, "INSERT into history_log (transaction,user_id,date_added) 
 		VALUES ('added $fn $ln as new student','$user',NOW() )");
 		if (mysqli_query($conn, $sql)) {
 
-			echo "<div class='erlert-success'><center><h4>" . "New Student Successfully Added." . "</h4></center></div>";
+			echo "<div class='erlert-success'><center><h4>" . "New Pupil Successfully Added." . "</h4></center></div>";
 
 		} else {
 		    "<script>

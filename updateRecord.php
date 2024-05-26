@@ -27,23 +27,26 @@
     <form method="POST" action="uprec.php">
     <input type="hidden" name="syi" value="<?php echo $row["SYI_ID"] ?>" >
     <input type="hidden" name="id" value="<?php echo $row1['STUDENT_ID'] ?>" >
-      <label style="font-size:6" for="">School</label>
+      <label style="font-size:20px" for="">PUPIL'S NAME:</label>
         <input type="text" name="school" style="width:450px;text-align:center" value="<?php echo $row["SCHOOL"] ?>" >
 
-      <label style="font-size:6" for="">Grade</label>
+      <label style="font-size:20px" for="">DIV:</label>
         <input type="text" style="width:50px;text-align:center" value="<?php echo $row1['PROGRAM']  ?>"  disabled>
         <select type="text" name="yr" style="width:100px;text-align:center;border:0px solid white;border-bottom:1px solid black" > 
         <option value="<?php echo $row["grade_id"] ?>"><?php echo $row["grade"] ?></option>
         </select>     
-
-      <label style="font-size:6" for="">Section</label>
-        <input type="text" name="sec" style="width:100px;text-align:center" value="<?php echo $row["SECTION"] ?>" >  
         <br>
+      <label style="font-size:20px" for="">CLASS:</label>
+        <input type="text" name="sec" style="width:100px;text-align:center" value="<?php echo $row["SECTION"] ?>" >  
+       
 
-      <label style="font-size:6" for="">Total number of years in school to date</label>
-        <input type="text" name="tny" style="width:290px;text-align:center" value="<?php echo $row["TOTAL_NO_OF_YEAR"] ?>" >
+      <label style="font-size:20px" for="">SEX:</label>
+        <input type="text" name="tny" style="width:150px;text-align:center" value="<?php echo $row["TOTAL_NO_OF_YEAR"] ?>" >
 
-      <label style="font-size:6" for="">School Year</label>
+      <label style="font-size:20px" for="">LIM NO:</label>
+        <input type="text" name="sy" style="width:150px;text-align:center" value="<?php echo $row["SCHOOL_YEAR"] ?>" >
+       
+       <label style="font-size:20px" for="">YEAR:</label>
         <input type="text" name="sy" style="width:150px;text-align:center" value="<?php echo $row["SCHOOL_YEAR"] ?>" >
 
 
@@ -52,40 +55,51 @@
     
         <br><br><br>
 
-        <div class="col-xs-9" style="width:690px">
+        <div class="col-xs-12" style="width:100%">
 
         <div class="row"  >
-          <div class="col-xs-4 text-center" style="height:53px;border:1px solid black;padding-right:1px">
+          <div class="col-xs-2 text-center" style="height:53px;border:1px solid black;padding-right:1px">
           <br>
-            <label for="" style="font-size:6">Subjects</label>
-            <br>
-          </div>
-          <div class="col-xs-4" style="height:53px;border:1px solid black;width:225px">
-          
-            <label for="" style="font-size:6;text-align:center;width:200px;border-bottom:1px solid black">Periodic Rating</label>
-            <br>
-            <label for="" style="font-size:6;width:43px;border-right:1px solid black;text-align:center">1</label>
-            <label for="" style="font-size:6;width:52px;border-right:1px solid black;text-align:center">2</label>
-            <label for="" style="font-size:6;width:52px;border-right:1px solid black;text-align:center">3</label>
-            <label for="" style="font-size:6;width:30px;;text-align:center">4</label>
-          </div>
-          <div class="col-xs-1 text-center" style="height:53px;border:1px solid black">
-          <br>
-            <label for="" style="font-size:6">Final</label>
+            <label for="" style="font-size:15">Subjects</label>
             <br>
           </div>
           <div class="col-xs-1 text-center" style="height:53px;border:1px solid black">
           <br>
-            <label for="" style="font-size:6">Units</label>
-            <br>
-          </div>
-          <div class="col-xs-1 text-center" style="height:53px;border:1px solid black;padding-left:1px;width:100px">
-          
-            <label for="" style="font-size:15px">Passed or Failed</label>
+            <label for="" style="font-size:15">FULL MARKS</label>
             <br>
           </div>
 
-            
+          <div class="col-xs-4" style="height:53px;border:1px solid black;width:245px">
+          
+            <label for="" style="font-size:15;text-align:center;width:200px;border-bottom:1px solid black">MID TERM II EXAMS</label>
+            <br>
+            <label for="" style="font-size:15;width:55px;border-right:1px solid black;text-align:center">MARKS</label>
+            <label for="" style="font-size:15;width:52px;border-right:1px solid black;text-align:center">AGG</label>
+            <label for="" style="font-size:15;width:52px;border-right:1px solid black;text-align:center">DIV</label>
+            <label for="" style="font-size:15;width:30px;;text-align:center">4</label>
+          </div>
+
+          <div class="col-xs-4" style="height:53px;border:1px solid black;width:245px">
+          
+            <label for="" style="font-size:15;text-align:center;width:200px;border-bottom:1px solid black">END OF TERM II EXAMS</label>
+            <br>
+            <label for="" style="font-size:15;width:55px;border-right:1px solid black;text-align:center">MARKS</label>
+            <label for="" style="font-size:15;width:52px;border-right:1px solid black;text-align:center">AGG</label>
+            <label for="" style="font-size:15;width:52px;border-right:1px solid black;text-align:center">DIV</label>
+            <label for="" style="font-size:15;width:30px;;text-align:center">4</label>
+          </div>
+
+          <div class="col-xs-1 text-center" style="height:53px;border:1px solid black;padding-left:1px;width:100px">
+          
+            <label for="" style="font-size:15px">TEACHER'S COMMENT</label>
+            <br>
+          </div>
+
+          <div class="col-xs-1 text-center" style="height:53px;border:1px solid black">
+          <br>
+            <label for="" style="font-size:13px">INITIALS</label>
+            <br>
+          </div>
 
         </div>  
          
@@ -101,7 +115,7 @@
 
 
       ?>
-          <div class="col-xs-4" style="border:1px solid black;height:25px">
+          <div class="col-xs-2" style="border:1px solid black;height:25px">
           <input type="hidden" name="tg_id[]" value="<?php echo $row2['TGS_ID'] ?>" >
 
            
@@ -119,8 +133,11 @@
             </select>
 
           </div>
-          
-          <div class="col-xs-4" style="border:1px solid black;width:59px;height:25px;font-size:12px;    padding-left: 5px;">
+          <div class="col-xs-1 text-center" style="font-size:12px;border:1px solid black;height:25px;padding-left:1px">
+          <input type="text" style="border-bottom:0px" name="final[]" value="<?php echo $row2['FINAL_GRADES'] ?>" id="fin<?php echo $row2['TGS_ID'] ?>" readonly>
+          </div>
+
+          <div class="col-xs-4" style="border:1px solid black;width:72px;height:25px;font-size:12px;    padding-left: 5px;">
           <input type="text" style="border-bottom:0px" name="1st[]" value="<?php echo $row2['1ST_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
            
         </div> 
@@ -131,18 +148,32 @@
         <input type="text" style="border-bottom:0px" name="3rd[]" value="<?php echo $row2['3RD_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID']?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
          
         </div> 
-        <div class="col-xs-4" style="border:1px solid black;width:54px;height:25px;font-size:12px;    padding-left: 5px;" >
+        <div class="col-xs-4" style="border:1px solid black;width:61px;height:25px;font-size:12px;    padding-left: 5px;" >
         <input type="text" style="border-bottom:0px" name="4th[]" value="<?php echo $row2['4TH_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
         </div>    
-        <div class="col-xs-1 text-center" style="font-size:12px;border:1px solid black;height:25px;padding-left:1px">
-        <input type="text" style="border-bottom:0px" name="final[]" value="<?php echo $row2['FINAL_GRADES'] ?>" id="fin<?php echo $row2['TGS_ID'] ?>" readonly>
-        </div>
-        <div class="col-xs-1 text-center" style="border:1px solid black;height:25px">
-       <input style="border-bottom:0px" type="text" name="units[]" value="<?php echo $row2['UNITS'] ?>">
-        </div>
+
+        <div class="col-xs-4" style="border:1px solid black;width:72px;height:25px;font-size:12px;    padding-left: 5px;">
+          <input type="text" style="border-bottom:0px" name="1st[]" value="<?php echo $row2['1ST_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
+           
+        </div> 
+        <div class="col-xs-4" style="border:1px solid black;width:56px;height:25px;font-size:12px;    padding-left: 5px;">
+         <input type="text" style="border-bottom:0px" name="2nd[]" value="<?php echo $row2['2ND_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" class="grade<?php echo $row2['TGS_ID'] ?>">       
+          </div> 
+        <div class="col-xs-4" style="border:1px solid black;width:56px;height:25px;font-size:12px;    padding-left: 5px;">
+        <input type="text" style="border-bottom:0px" name="3rd[]" value="<?php echo $row2['3RD_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID']?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
+         
+        </div> 
+        <div class="col-xs-4" style="border:1px solid black;width:61px;height:25px;font-size:12px;    padding-left: 5px;" >
+        <input type="text" style="border-bottom:0px" name="4th[]" value="<?php echo $row2['4TH_GRADING'] ?>"  onkeyup="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" onkeydown="calculateSum2(<?php echo $row2['TGS_ID'] ?>)" class="grade<?php echo $row2['TGS_ID'] ?>">
+        </div>   
+
         <div class="col-xs-1 text-center" style="border:1px solid black;height:25px;    padding-left: 2px;text-align:center;font-size:12px;width:100px">
       <input style="border-bottom:0px" type="text" name="action[]" value="<?php echo $row2['PASSED_FAILED'] ?>" id="action<?php echo $row2['TGS_ID'] ?>">
           
+        </div>
+
+        <div class="col-xs-1 text-center" style="border:1px solid black;height:25px">
+       <input style="border-bottom:0px" type="text" name="units[]" value="<?php echo $row2['UNITS'] ?>">
         </div>
 
         <?php
@@ -164,18 +195,16 @@
     <div class="col-xs-3">  
     <br><br>
   <div class="row">
-     <label style="font-size:10px" for="">Has advance unit in</label>
-        <input type="text" name="au" style="width:162px;text-align:center" value="<?php echo $row['ADVANCE_UNIT'] ?>" >
+     <label style="font-size:20px" for="">Class Teacher's Comment:</label>
+        <input type="text" name="au" style="width:700px;text-align:center" value="<?php echo $row['ADVANCE_UNIT'] ?>" >
    </div>
    <div class="row">
    <br><br>
-     <label style="font-size:10px" for="">lacks unit in</label>
-        <input type="text" name="lu" style="width:200px;text-align:center" value="<?php echo $row['LACK_UNIT'] ?>" >
+     
+     <label style="font-size:20px" for="">Head Teacher's Comment:</label>
+        <input type="text" name="class" style="width:700px;text-align:center" value="<?php echo $row['TO_BE_CLASSIFIED'] ?>" >
         <br><br>
-     <label style="font-size:10px" for="">To be classified as</label>
-        <input type="text" name="class" style="width:170px;text-align:center" value="<?php echo $row['TO_BE_CLASSIFIED'] ?>" >
-        <br><br>
-     <label style="font-size:10px" for="">Total Number of<br>years in school to date</label>
+     <!-- <label style="font-size:10px" for="">Total Number of<br>years in school to date</label>
         <input type="text"  style="width:145px;text-align:center" value="<?php echo $row['TOTAL_NO_OF_YEAR'] ?>" >
         <br><br>
      <label style="font-size:10px" for="">Adviser:</label>
@@ -191,7 +220,7 @@
          <option>Promoted</option>
          <option>Conditional(Promoted)</option>
          <option>Retained</option>
-         </select>
+         </select> -->
         
 
         <a id="new_add" class="btn btn-info"><i class="fa fa-plus"></i>Add row</a>

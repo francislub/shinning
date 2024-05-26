@@ -32,17 +32,18 @@ $search_query = mysqli_query($conn, "SELECT * FROM student_info WHERE LRN_NO = '
 			 LASTNAME ='$ln',
 			 FIRSTNAME ='$fn',
 			 MIDDLENAME ='$mn',
-			 BIRTH_PLACE ='$bp',
+			--  BIRTH_PLACE ='$bp',
 			 PARENT_GUARDIAN ='$pg',
 			 P_ADDRESS ='$pga',
-			 INT_COURSE_COMP ='$icc',
-			 SCHOOL_YEAR ='$sy',
-			 GEN_AVE ='$ave',
-			 TOTAL_NO_OF_YEARS ='$tny',
+			--  INT_COURSE_COMP ='$icc',
+			--  SCHOOL_YEAR ='$sy',
+			--  GEN_AVE ='$ave',
+			--  TOTAL_NO_OF_YEARS ='$tny',
 			 DATE_OF_BIRTH ='$dob',
 			 ADDRESS ='$address',
 			 GENDER ='$gender',
 			 PROGRAM =	'$prog'
+			 STREEM =	'$streem'
 			 	where STUDENT_ID = '$id' ";
 
 		if (mysqli_query($conn, $sql)) {

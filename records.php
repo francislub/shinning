@@ -1,20 +1,20 @@
 
-          <h1 class="page-header">Student Records</h1>
+          <h1 class="page-header">Pupil's Records</h1>
 
        <div class="col-md-12">   
        <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Students List</h3>
+          <h3 class="panel-title">Pupil's List</h3>
         </div> 
         <div class="panel-body">  
   <table id="students" class="table table-bordered">
     <thead>
       <tr id="heads">
-        <th style="width:10%">LRN NO.</th>
+        <th style="width:10%">NO.</th>
         <th style="width:20%">Name</th>
         <th style="width:10%">Gender</th>
-        <th style="width:10%">Curriculum</th>
-        <th style="width:10%"></th>
+        <th style="width:10%">Class</th>
+        <th style="width:10%">Action</th>
       </tr>
     </thead>
     <tbody>

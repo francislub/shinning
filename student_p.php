@@ -48,7 +48,7 @@
          </div>
          <div class="row">
          <div class="col-md-2 text-right">
-         <label>LRN:</label>
+         <label>Pupil's ID:</label>
          </div>
          <div class="col-md-2 text-center">
           <input type="text" maxlength="12" class="form-control input-xs"  name="lrn" value="<?php echo $row['LRN_NO'] ?>"
@@ -117,21 +117,8 @@
           </div>
 
          </div>
-         <div class="row">
-         <div class="col-md-2 text-right">
-         <label>Place of Birth:</label>
-         </div>
-         <div class="col-md-4 text-center">
-         <input type="text" class="form-control input-xs"  name="bp" value="<?php echo $row['BIRTH_PLACE'] ?>"
-          <br>
-          <label></label>
-            
-          </div>
 
-         
-        
-
-        </div>
+        </div> -->
          <div class="row">
          <div class="col-md-2 text-right">
          <label>Address:</label>
@@ -172,61 +159,12 @@
 
          </div>
 
-        <div class="row">
+         </div>
+         <div class="row">
          <div class="col-md-2 text-right">
-         <label>Intermediate Course Completed:</label>
+         <label>Class Enrolled:</label>
          </div>
          <div class="col-md-4 text-center">
-          <textarea type="text" class="form-control input-xs"  name="icc" ><?php echo $row['INT_COURSE_COMP'] ?></textarea>
-          
-          <label></label>
-            
-          </div>
-
-         </div>
-
-         <div class="row">
-         <div class="col-md-2 text-right">
-         <label>Total no. of years:</label>
-         </div>
-         <div class="col-md-2 text-center">
-          <input type="number" class="form-control input-xs"  name="tny" value="<?php echo $row['TOTAL_NO_OF_YEARS'] ?>"
-          <br>
-          <label></label>
-            
-          </div>
-
-         </div>
-         <div class="row">
-         <div class="col-md-2 text-right">
-         <label>School Year:</label>
-         </div>
-         <div class="col-md-2 text-center">
-          <input type="text" class="form-control input-xs"  name="sy" value="<?php echo $row['SCHOOL_YEAR'] ?>"
-          <br>
-          <label></label>
-            
-          </div>
-
-         </div>
-
-         <div class="row">
-         <div class="col-md-2 text-right">
-         <label>General Average:</label>
-         </div>
-         <div class="col-md-2 text-center">
-          <input type="number" class="form-control input-xs"  name="ave" value="<?php echo $row['GEN_AVE'] ?>"
-          <br>
-          <label></label>
-            
-          </div>
-
-         </div>
-         <div class="row">
-         <div class="col-md-2 text-right">
-         <label>Curriculum Enrolled:</label>
-         </div>
-         <div class="col-md-2 text-center">
          <select id="prog" name="prog" class="form-control input-xs" required="">
         <option value="<?php echo $row['PROGRAM_ID'] ?>"><?php echo $row['PROGRAM'] ?></option>
     <?php
@@ -244,6 +182,20 @@
           </div>
 
          </div>
+
+         <div class="row">
+         <div class="col-md-2 text-right">
+         <label>Streem:</label>
+         </div>
+         <div class="col-md-4 text-center">
+          <input type="text" class="form-control input-xs"  name="streem" value="<?php echo $row['STREEM'] ?>"
+          br>
+          <label></label>
+            
+          </div>
+
+         </div>
+
          <div class="row">
          <div class="col-md-8 text-right">
           <button type="submit" class="btn btn-info"><i class="fa fa-pencil-square" aria-hidden="true"></i> Update</button>

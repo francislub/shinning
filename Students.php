@@ -29,8 +29,8 @@ success:function(data)
   include 'newstudent.php';
   ?>
 
-          <h1 class="page-header">STUDENTS <button style="float:right" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-      <i class="glyphicon glyphicon-plus"></i> New Entry</button></h1>
+          <h1 class="page-header">PUPIL'S <button style="float:right" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+      <i class="glyphicon glyphicon-plus"></i> Add Pupil's</button></h1>
   
  
 
@@ -41,7 +41,7 @@ success:function(data)
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">New Students</h4>
+          <h4 class="modal-title">New Pupil's</h4>
         </div>
         <div class="modal-body">
 
@@ -53,16 +53,16 @@ success:function(data)
 <div class="container">
 
 <div class="col-md-12" style="width:70%;border-bottom:1px solid #333">
-<h4><b>Student's Personal Details </b></h4>
+<h4><b>Pupil's Personal Details </b></h4>
 </div>
 <br>
 <br>
 <div class="col-md-4">
 <br>
 <div class="form-group">
-  <label class="col-xs-4 control-label" for="lrn">LRN Number</label>  
+  <label class="col-xs-4 control-label" for="lrn">Pupil ID</label>  
   <div class="col-xs-6">
-  <input id="lrn" name="lrn" type="text" placeholder="Enter LRN " maxlength="12" class="form-control input-xs" required="">
+  <input id="lrn" name="lrn" type="text" placeholder="Enter PupilID " maxlength="12" class="form-control input-xs" required="">
   </div>
 </div>
 
@@ -72,11 +72,11 @@ success:function(data)
   <div class="col-xs-8">
     <div class="input-group">
       <input id="name" class="form-control input-xs"
-      style="text-transform: capitalize;" name="lname" placeholder="Lastname"  type="text" required="">
-      <input id="name" class="form-control input-xs"
       style="text-transform: capitalize;" name="fname" placeholder="Firstname"  type="text" required="">
       <input id="name" class="form-control input-xs"
-      style="text-transform: capitalize;" name="mname" placeholder="Middlename"  type="text" required="">
+      style="text-transform: capitalize;" name="lname" placeholder="Lastname"  type="text" required="">
+      <input id="name" class="form-control input-xs"
+      style="text-transform: capitalize;" name="mname" placeholder="Middlename"  type="text">
 
     </div>
   </div>
@@ -86,20 +86,21 @@ success:function(data)
   <label class="col-xs-4 control-label" for="gender">Gender</label>
   <div class="col-xs-4">
     <select id="gender" name="gender" class="form-control input-xs">
+      <option value="">Select Gender</option>
       <option value="MALE">Male</option>
       <option value="FEMALE">Female</option>
     </select>
   </div>
 </div>
 
-<div class="form-group">
+<!-- <div class="form-group">
   <label class="col-xs-4 control-label" for="address">Birth Place</label>
   <div class="col-xs-8">
     <div class="input-group">
       <input id="address" class="form-control"
       style="text-transform: capitalize;" name="bp" placeholder="Birth Place"  type="text" required="">    </div>
   </div>
-</div>
+</div> -->
 </div>
 
 
@@ -118,7 +119,7 @@ success:function(data)
 <div class="form-group">
   <label class="col-xs-5 control-label" for="pob">ADDRESS</label>  
   <div class="col-xs-7">
-  <input id="pob" name="pob" type="text" style="text-transform: capitalize;" placeholder="Enter Student Address" class="form-control input-xs" required="">
+  <input id="pob" name="pob" type="text" style="text-transform: capitalize;" placeholder="Enter Pupil's Address" class="form-control input-xs" required="">
   </div>
 </div>
 
@@ -134,7 +135,7 @@ success:function(data)
   </div>
 </div>
 </div>
-<div class="col-md-12" style="width:70%;border-bottom:1px solid #333">
+<!-- <div class="col-md-12" style="width:70%;border-bottom:1px solid #333">
 <h4><b>Intermediate Course Details </b></h4>
 </div>
 <br>
@@ -180,22 +181,42 @@ success:function(data)
 
   </div>
 </div>
-</div>
+</div> -->
 <div class="col-md-12" style="width:70%;border-bottom:1px solid #333">
-<h4><b>Program Enrolled </b></h4>
+<h4><b>Class Enrolled </b></h4>
 </div>
-<br><br>
+<br>
 <div class="form-group">
-  <label class="col-xs-4 control-label" for="Prog">Curriculum</label>
+  <label class="col-xs-4 control-label" for="Prog">Class</label>
   <div class="col-xs-4">
     <select id="prog" name="prog" class="form-control input-xs" required="">
-    <option></option>
+    <option>Select Class</option>
     <?php
     include 'db.php';
-    $sql = mysqli_query($conn,"SELECT * from program Order by PROGRAM ASC");
+    $sql = mysqli_query($conn,"SELECT * from class Order by class ASC");
     while($row=mysqli_fetch_assoc($sql)){
     ?>
-      <option value="<?php echo $row['PROGRAM_ID'] ?>"><?php echo $row['PROGRAM'] ?></option>
+      <option value="<?php echo $row['class_id'] ?>"><?php echo $row['class'] ?></option>
+      <?php
+    }
+    mysqli_close($conn);
+      ?>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-xs-4 control-label" for="streem">Streem</label>
+  <div class="col-xs-4">
+    <select id="streem" name="streem" class="form-control input-xs">
+    <option>Select Streem</option>
+    <option>None</option>
+    <?php
+    include 'db.php';
+    $sql = mysqli_query($conn,"SELECT streem from class Order by class ASC");
+    while($row=mysqli_fetch_assoc($sql)){
+    ?>
+      <option value="<?php echo $row['streem'] ?>"><?php echo $row['streem'] ?></option>
       <?php
     }
     mysqli_close($conn);
@@ -207,10 +228,6 @@ success:function(data)
 
 </div>
 </fieldset>
-
-
-
-
 
         </div>
         <div class="modal-footer">
@@ -231,17 +248,18 @@ success:function(data)
           
        <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Students List</h3>
+          <h3 class="panel-title">Pupil's List</h3>
 
         </div> 
         <div class="panel-body"> 
   <table id="students" class="table table-bordered table-condensed">
     <thead>
       <tr id="heads">
-        <th style="width:10%;text-align:center">LRN NO.</th>
+        <th style="width:10%;text-align:center">Pupil's NO.</th>
         <th style="width:30%;text-align:center">Name</th>
-        <th style="width:20%;text-align:center">Curriculum</th>
-        <th style="width:10%"></th>
+        <th style="width:20%;text-align:center">Class</th>
+        <th style="width:20%;text-align:center">Streem</th>
+        <th style="width:10%;text-align:center">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -250,7 +268,7 @@ success:function(data)
     $sql=  mysqli_query($conn, "SELECT * FROM student_info order by LASTNAME ");
     while($row = mysqli_fetch_assoc($sql)) {
       $sid = $row['STUDENT_ID'];
-      $sql2=  mysqli_query($conn, "SELECT * FROM program WHERE PROGRAM_ID = '".$row['PROGRAM']."' ");
+      $sql2=  mysqli_query($conn, "SELECT * FROM class WHERE class_id = '".$row['PROGRAM']."' ");
          while($row2 = mysqli_fetch_assoc($sql2)) {    
 
 
@@ -261,7 +279,8 @@ success:function(data)
         <td><?php echo $row['LRN_NO'] ?></td>
         <td><?php echo $row['LASTNAME'] . ', ' . $row['FIRSTNAME']. ' ' . $row['MIDDLENAME'] ?></td>
         
-        <td style="text-align:center"><?php echo $row2['PROGRAM'] ?></td>
+        <td style="text-align:center"><?php echo $row2['class'] ?></td>
+        <td style="text-align:center"><?php echo $row['STREEM'] ?></td>
         
      
       <td style="text-align:center"> 
@@ -286,7 +305,7 @@ success:function(data)
                   <div class="modal-header"> 
                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
                      <h4 class="modal-title">
-                     <i class=""></i> PROFILE
+                     <i class=""></i> PUPIL'S PROFILE
                      </h4> 
                   </div> 
                        <div id="content">

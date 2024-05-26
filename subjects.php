@@ -91,7 +91,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="sub" class="cols-sm-2 control-label">For</label>
+              <label for="sub" class="cols-sm-2 control-label">Class</label>
               <div class="cols-sm-4">
                 <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
@@ -103,8 +103,8 @@
                   $sql = mysqli_query($conn,"SELECT * from class");
                   while($row=mysqli_fetch_assoc($sql)){
                    ?>
-                  <option value="<?php echo $row['CLASS'] ?>">
-                  <?php echo $row['CLASS'] ?>
+                  <option value="<?php echo $row['class'] ?>">
+                  <?php echo $row['class'] ?>
                   </option>
                   <?php } mysqli_close($conn); ?>
                   </select>
@@ -113,7 +113,7 @@
             </div>
 
             <div class="form-group">
-              <label for="des" class="cols-sm-2 control-label">Description</label>
+              <label for="des" class="cols-sm-2 control-label">Description Of The Subject</label>
               <div class="cols-sm-4">
                 <div class="input-group">
                   <textarea type="text" class="form-control" name="des" id="des"  
