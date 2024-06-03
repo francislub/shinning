@@ -90,6 +90,30 @@ success:function(data)
 
 
     ?>
+    <?php
+// Database connection
+include 'db.php';
+// Fetch data from the database
+$query = "SELECT `from`, `to`, `grade` FROM grade";
+$result = mysqli_query($conn, $query);
+
+if (!$result) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+// Store fetched data in arrays
+$grades = [];
+$marks = [];
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $grades[] = $row['grade'];
+    $marks[] = $row['from'] . ' - ' . $row['to'];
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
 
           <h1 class="page-header"><?php echo $row['LASTNAME'] . ', ' . $row['FIRSTNAME']. ' ' . $row['MIDDLENAME'] ?></h1>
           <?php
@@ -386,54 +410,22 @@ success:function(data)
      <label class="grade" >GRADING SCALE </label> 
    </div>
 
-    <div class="col-xs-12">
-      <table class="table" style="width:940px" >
-          <tr>
-            <th style="font-size:15px;text-align:center;width:50px">D1</td>
-            <th style="font-size:15px;text-align:center;width:50px">D2</td>
-            <th style="font-size:15px;text-align:center;width:50px">C3</td>
-            <th style="font-size:15px;text-align:center;width:50px">C4</td>
-            <th style="font-size:15px;text-align:center;width:50px">C5</td>
-            <th style="font-size:15px;text-align:center;width:50px">C6</td>
-            <th style="font-size:15px;text-align:center;width:50px">P7</td>
-            <th style="font-size:15px;text-align:center;width:50px">P8</td>
-            <th style="font-size:15px;text-align:center;width:50px">F9</td>
-           </tr>
-          <!-- <tr>
-            <td style="font-size:10px;text-align:center;width:130px">Days of School</td>
-            <?php
-            $atten= mysqli_query($conn, "SELECT * FROM attendance where SYI_ID = '$syi' order by ATT_ID ");
-            while($att=mysqli_fetch_assoc($atten)){
-
-
-
-             ?>
-            <td style="font-size:10px;text-align:center;width:50px"> <?php echo $att['DAYS_OF_CLASSES'] ?></td>
-            <?php } ?>
-            
-            <td style="font-size:10px;text-align:center;width:130px"><?php echo $row['TDAYS_OF_CLASSES'] ?> </td>
-          </tr> -->
-          <!-- <tr>
-            <td style="font-size:10px;text-align:center;width:130px">Days Present</td>
-            <?php
-            $atten2= mysqli_query($conn, "SELECT * FROM attendance where SYI_ID = '$syi' order by ATT_ID ");
-            while($att2=mysqli_fetch_assoc($atten2)){
-
-
-
-             ?>
-            <td style="font-size:10px;text-align:center;width:50px">
-              <?php echo $att2['DAYS_PRESENT'] ?>
-            </td>
-           <?php } ?>
-            <td style="font-size:10px;text-align:center;width:130px">
-              <?php echo $row['TDAYS_PRESENT'] ?>
-            </td>
-          </tr> -->
-        
-      </table>
-    </div> 
-    <br>
+   <div class="col-xs-12">
+    <table class="table" style="width:940px">
+        <tr>
+            <?php foreach ($grades as $grade): ?>
+                <th style="font-size:15px;text-align:center;width:50px"><?php echo htmlspecialchars($grade); ?></th>
+            <?php endforeach; ?>
+        </tr>
+        <tr>
+            <?php foreach ($marks as $mark): ?>
+                <td style="font-size:15px;text-align:center;width:50px"><?php echo htmlspecialchars($mark); ?></td>
+            <?php endforeach; ?>
+        </tr>
+    </table>
+   </div>
+   
+   <br>
     </div class="row">
      <label style="font-size:20px" for="">Next Term Begins On</label>
         <input type="text" style="width:270px;text-align:center" value="<?php echo $row['TO_BE_CLASSIFIED'] ?>" disabled>
