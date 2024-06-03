@@ -223,12 +223,12 @@
          </select> -->
         
 
-        <a id="new_add" class="btn btn-info"><i class="fa fa-plus"></i>Add row</a>
+        <!-- <a id="new_add" class="btn btn-info"><i class="fa fa-plus"></i>Add row</a> -->
    </div>
     </div>
 
 
-    <div class="col-xs-12">
+    <!-- <div class="col-xs-12">
       <table class="table" style="width:940px" >
        
           <tr>
@@ -286,10 +286,8 @@
             </td>
           </tr>
         
-      </table>
+      </table> -->
 
-      <button type="submit" class="btn btn-success">Update</button>
-    </form>
     </div>
        </div>
     </div>
@@ -315,6 +313,8 @@ mysqli_close($conn);
 }
 
      ?> 
+      <button type="submit" class="btn btn-success">Update</button>
+    </form>
      <script>
       $(document).ready(function() {
     //this calculates values automatically 

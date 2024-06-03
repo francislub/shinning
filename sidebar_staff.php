@@ -37,26 +37,26 @@ $school_year=$s['school_year'];
         <li>
             <a href="rms.php?page=records"><i class="fa fa-fw fa-files-o"></i>Academic Record </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="rms.php?page=candidates&sy=<?php echo $school_year ?>"><i class="fa fa-fw fa-users"></i> Promote Candidates </a>
         </li>
         <li>
             <a href="rms.php?page=candidates_list&sy=<?php echo $school_year ?>"><i class="fa fa-fw fa-file-o"></i> Candidates List </a>
-        </li>
+        </li> -->
     </ul>
 </li>
 <li>
     <a href="javascript:void(0)" data-toggle="collapse" data-target="#reportsCollapse"><i class="fa fa-fw fa-file"></i> Reports       <i class="fa fa-fw fa-caret-down"></i></a>
     <ul id="reportsCollapse" class="collapse">
         <li>
-            <a href="rms.php?page=report"><i class="fa fa-fw fa-files-o"></i> Form 137</a>
+            <a href="rms.php?page=report"><i class="fa fa-fw fa-files-o"></i>Report Cards</a>
         </li>
-        <li>
+        <!-- <li>
             <a href="#" data-toggle="modal" data-target="#s_report"><i class="fa fa-fw fa-files-o"></i> Pupil's List</a>
         </li>
         <li>
             <a href="rms.php?page=candidates_report&school_year=<?php echo $school_year ?>" ><i class="fa fa-fw fa-file-text-o"></i> Candidates Report</a>
-        </li>
+        </li> -->
     </ul>
 </li>
 </ul>

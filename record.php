@@ -389,7 +389,6 @@ success:function(data)
     <div class="col-xs-12">
       <table class="table" style="width:940px" >
           <tr>
-            <!-- <th style="font-size:10px;text-align:center;width:130px">Months</td> -->
             <th style="font-size:15px;text-align:center;width:50px">D1</td>
             <th style="font-size:15px;text-align:center;width:50px">D2</td>
             <th style="font-size:15px;text-align:center;width:50px">C3</td>
@@ -399,11 +398,7 @@ success:function(data)
             <th style="font-size:15px;text-align:center;width:50px">P7</td>
             <th style="font-size:15px;text-align:center;width:50px">P8</td>
             <th style="font-size:15px;text-align:center;width:50px">F9</td>
-            <!-- <th style="font-size:10px;text-align:center;width:50px">March</td>
-            <th style="font-size:10px;text-align:center;width:50px">April</td>
-            <th style="font-size:10px;text-align:center;width:50px">May</td>
-            <th style="font-size:10px;text-align:center;width:130px">Total</td> -->
-          </tr>
+           </tr>
           <!-- <tr>
             <td style="font-size:10px;text-align:center;width:130px">Days of School</td>
             <?php

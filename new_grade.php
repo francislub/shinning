@@ -30,7 +30,7 @@
 	$comment=$_POST['comment'];
 	$user = $_SESSION['ID'];
 	
-	if($_POST['id'] == ""){
+	if($_POST['grade_id'] == ""){
 
 	if ($sql=mysqli_query($conn, "INSERT into grade (from,to,grade,comment) 
 		VALUES ( '$from','$to','$grade','$comment' )") && $sql2=mysqli_query($conn, "INSERT into history_log (transaction,user_id,date_added) 
@@ -47,7 +47,7 @@
 
 	}
 	}else{
-		$id=$_POST['id'];
+		$id=$_POST['grade_id'];
 		$sql = "UPDATE grade SET from='$from',to='$to', grade='$grade',comment='$comment' WHERE grade_id='$id'";
 		$sql2=mysqli_query($conn, "INSERT into history_log (transaction,user_id,date_added) 
 		VALUES ('updated $id in the grades list','$user',NOW() )");

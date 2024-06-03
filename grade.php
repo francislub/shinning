@@ -58,7 +58,7 @@
 <script>
   function update_grade($i){
    var i = $i;
-      $("#id").val($("#id"+i).val());
+      $("#grade_id").val($("#grade_id"+i).val());
       $("#from").val($("#from"+i).val());
       $("#to").val($("#to"+i).val());
       $("#grade").val($("#grade"+i).val());
@@ -76,7 +76,7 @@
         <div class="main-login main-center">
         <h3 id="head">Add New Grade</h3>
           <form class="" method="post">
-            <input type="hidden" id="id" name="id">
+            <input type="hidden" id="grade_id" name="grade_id">
             <div class="form-group">
               <label for="from" class="cols-sm-2 control-label">From</label>
               <div class="cols-sm-4">
