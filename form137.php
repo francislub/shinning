@@ -18,6 +18,29 @@ $user = $_SESSION['ID'];
 
 
 ?>
+<?php
+// Database connection
+include 'db.php';
+// Fetch data from the database
+$query = "SELECT `from`, `to`, `grade` FROM grade";
+$result = mysqli_query($conn, $query);
+
+if (!$result) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+// Store fetched data in arrays
+$grades = [];
+$marks = [];
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $grades[] = $row['grade'];
+    $marks[] = $row['from'] . ' - ' . $row['to'];
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
 <head>
     <link rel="icon" href="images/logo.jpg">
 
@@ -394,32 +417,24 @@ $user = $_SESSION['ID'];
 		<center><p><h4><b>GRADING SCALE</b></h4></p></center>
         <!-- <br> -->
 		<table style="width:750px;border-collapse:collapse">
+		
+		<tr>
+			
+		</tr>
 			<tr>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center>90-100</center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;"><center></center></td>
+			<?php foreach ($grades as $grade): ?>
+				<td style="width:80px;border:1px solid black;font-size:15px;"><center><b><?php echo htmlspecialchars($grade); ?></b></td>
+			<?php endforeach; ?>
 			</tr>
-			
-			
+
 			<tr>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
-			<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b></b></td>
+			<?php foreach ($marks as $mark): ?>
+				<td style="width:80px;border:1px solid black;font-size:12px;height:15px"><center><b><?php echo htmlspecialchars($mark); ?></b></td>
+			<?php endforeach; ?>
 			</tr>
         <!-- <br> -->
 		<table style="width:750px;border-collapse:collapse">
+		
 		<div class="row">
 		    <td style="width:400px;font-size:12px">
 

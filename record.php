@@ -81,16 +81,7 @@ success:function(data)
     border-collapse: collapse;
 }
     </style>
- 
-    <?php
-    include 'db.php';
-    $id = $_GET['id'];
-    $sql=  mysqli_query($conn, "SELECT * FROM student_info where STUDENT_ID = '$id' ");
-    while($row = mysqli_fetch_assoc($sql)) {
-
-
-    ?>
-    <?php
+     <?php
 // Database connection
 include 'db.php';
 // Fetch data from the database
@@ -113,6 +104,15 @@ while ($row = mysqli_fetch_assoc($result)) {
 // Close the database connection
 mysqli_close($conn);
 ?>
+ 
+    <?php
+    include 'db.php';
+    $id = $_GET['id'];
+    $sql=  mysqli_query($conn, "SELECT * FROM student_info where STUDENT_ID = '$id' ");
+    while($row = mysqli_fetch_assoc($sql)) {
+
+
+    ?>
 
 
           <h1 class="page-header"><?php echo $row['LASTNAME'] . ', ' . $row['FIRSTNAME']. ' ' . $row['MIDDLENAME'] ?></h1>
